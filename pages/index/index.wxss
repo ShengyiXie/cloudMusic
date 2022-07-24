@@ -1,0 +1,142 @@
+/* pages/index/index.wxss */
+.banners {
+  width: 100%;
+  height: 300rpx;
+}
+
+.banners image {
+  width: 100%;
+  height: 100%
+}
+
+/* 五个图标导航区域 */
+.navContainer {
+  /* 水平排布 */
+  display: flex;
+}
+
+.navItem {
+  /* 纵向布局 */
+  display: flex;
+  flex-direction: column;
+  /* 文本水平居中 */
+  align-items: center;
+  width: 20%;
+}
+
+/* 权重比下面的样式高 */
+.navItem .iconfont {
+  width: 100rpx;
+  height: 100rpx;
+  /* 圆角 */
+  border-radius: 50%;
+  /* 水平居中 */
+  text-align: center;
+  /* 行高 */
+  line-height: 100rpx;
+  background: rgb(240, 19, 19);
+  font-size: 50rpx;
+}
+
+.navItem text {
+  font-size: 26rpx;
+}
+
+/* 推荐歌曲 */
+.recommendContainer {
+  /* 内边距 */
+  padding: 20rpx;
+}
+
+
+
+/* 推荐内容区 */
+.recommendScroll {
+  display: flex;
+  height: 300rpx;
+}
+
+.scrollItem {
+  width: 200rpx;
+  /* 高度由内容撑开 */
+  margin-right: 20rpx;
+}
+
+.scrollItem image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.scrollItem text {
+  font-size: 26rpx;
+  /* 单行文本溢出隐藏，省略号代替 */
+  /* text是内联元素，不是块级，所以overflow会失效 */
+  /* display: block; */
+  /* 不让它换行 */
+  /* white-space: nowrap; */
+  /* 超出部分隐藏 */
+  /* overflow: hidden; */
+  /* 省略号代替 */
+  /* text-overflow: ellipsis; */
+
+  /* 多行文本溢出，省略号代替 */
+  /* 超出部分隐藏 */
+  overflow: hidden;
+  /* 省略号代替 */
+  text-overflow: ellipsis;
+  /* webkit模型 */
+  display: -webkit-box;
+  /* 设置对齐模式，纵向对齐 */
+  -webkit-box-orient: vertical;
+  /* 对应的是两行 */
+  -webkit-line-clamp: 2;
+}
+
+/* 排行榜 */
+.topList {
+  /* 内边距 */
+  padding: 20rpx;
+}
+
+.topListSwiper {
+  height: 400rpx;
+}
+
+.swiperItem {
+  width: 96%;
+  background: #fbfbfb;
+}
+
+.swiperItem .title {
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+
+.musicItem {
+  /* 当一个元素设置为flex,其子元素会自动成为block元素 */
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.musicItem image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 6rpx;
+}
+
+.musicItem .count {
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.musicItem .musicName {
+  height: 100rpx;
+  line-height: 100rpx;
+  max-width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

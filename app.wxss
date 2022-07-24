@@ -1,0 +1,6 @@
+@import "/static/iconfont/iconfont.wxss";
+
+page {
+    /* 默认标签的高度设置100% */
+    height: 100%;
+}
